@@ -1,0 +1,153 @@
+body { 
+  font-family: Arial, sans-serif; /* set font family */
+  background: rgb(230,245,233); /* page background */
+  color: rgb(51,51,51); /* text color */
+  line-height: 1.6; /* line spacing */ 
+}
+
+header {
+   background-color: rgb(165,214,167); /* header + nav same bg color */
+  text-align: center; /* center content */
+  padding: 20px 0px; /* top/bottom spacing */ 
+}
+
+.logo { 
+  width: 120px; /* logo width */
+  display: block; /* block element */
+  margin: 10px auto 10px auto; /* center horizontally */ 
+}
+
+header h1 { 
+  font-size: 56px; /* title size */
+  color: rgb(42,93,61); /* title color */
+  font-family: luminari; /* decorative font */
+ }
+
+nav { background-color: rgb(165,214,167); /* nav background */
+  padding: 10px 0px; /* spacing inside nav */ 
+}
+
+nav ul { 
+  display: flex; /* horizontal layout */
+  justify-content: center; /* center links */
+  list-style: none; /* remove bullets */ 
+}
+
+nav ul li {
+   margin: 0px 25px; /* spacing between nav items */ 
+  }
+
+nav ul li a { 
+  text-decoration: none; /* remove underline */
+  font-size: 21px; /* link text size */
+  color: rgb(42,93,61); /* link text color */
+  font-weight: bold; /* bold links */
+  transition: 0.3s; /* smooth hover */ }
+
+nav ul li a:hover,
+nav ul li a.active { 
+  color: rgb(255,255,255); /* hover/active text color */
+  background: rgb(42,93,61); /* hover/active bg */
+  padding: 6px 12px; /* spacing inside */
+  border-radius: 6px; /* rounded edges */ 
+}
+
+.reviews-container { 
+  text-align: center; /* center text */
+  padding: 50px 20px; /* spacing around section */ 
+}
+
+.reviews-container h2 { 
+  font-size: 32px; /* heading size */
+  margin-bottom: 30px; /* spacing below heading */
+  color: rgb(27,67,50); /* heading color */ 
+}
+
+.reviews-grid { 
+  display: grid; /* grid layout */
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); /* responsive columns */
+  gap: 25px; /* space between cards */
+  max-width: 1000px; /* container width */
+  margin: auto; /* center grid */ 
+}
+
+.review-card { 
+  background: rgb(255,255,255); /* card bg */
+  padding: 25px; /* inside spacing */
+  border-radius: 12px; /* rounded edges */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* card shadow */
+  text-align: center; /* center text */
+  transition: transform 0.3s; /* hover effect */
+ }
+
+.review-card:hover {
+   transform: translateY(-5px); /* lift on hover */
+   }
+
+.review-card img { 
+  width: 90px; /* image width */
+  height: 90px; /* image height */
+  border-radius: 50%; /* circle shape */
+  margin-bottom: 15px; /* space under image */ 
+}
+
+.review-card p { 
+  font-size: 18px; /* review text size */
+  margin-bottom: 10px; /* spacing under text */
+ }
+
+.review-card strong { 
+  color: rgb(42,93,61); /* name color */
+  font-weight: bold; /* bold name */ 
+}
+
+
+
+.btn-pill { 
+  display: inline-block; /* inline but styled */
+  padding: 10px 18px; /* button spacing */
+  background: rgb(28,107,60); /* button bg */
+  color: rgb(255,255,255); /* text color */
+  border-radius: 9999px; /* pill shape */
+  text-decoration: none; /* no underline */
+  font-weight: bold; /* bold text */
+ }
+
+.btn-pill:hover { 
+  background: rgb(20,80,44); /* darker hover */
+ }
+ .pager {
+   position: fixed; /* stays on screen */
+  bottom: 70px; /* above ticker */
+  z-index: 50; /* layer on top */ 
+}
+
+.pager.right {
+   right: 20px; /* move to right */
+   }
+.pager.left {
+   left: 20px; /* move to left */ 
+  }
+
+.ticker {
+   position: fixed; /* pinned at bottom */
+  left: 0px; right: 0px; bottom: 0px; /* full width */
+  background: rgb(220,239,226); /* banner bg */
+  border-top: 1px solid rgb(185,222,200); /* top border */
+  overflow: hidden; /* hide overflow */
+  z-index: 40; /* stack order */ 
+}
+
+.ticker-track {
+   display: inline-block; /* scrolling inline */
+  white-space: nowrap; /* no wrap */
+  padding: 8px 0px; /* spacing */
+  font-weight: bold; /* bold text */
+  color: rgb(33,90,54); /* text color */
+  animation: ticker-scroll 25s linear infinite; /* scroll animation */ 
+}
+
+@keyframes ticker-scroll { 
+  0% { transform: translateX(0px); } /* start position */
+  100% { transform: translateX(-50%); } /* scroll left */ 
+}
